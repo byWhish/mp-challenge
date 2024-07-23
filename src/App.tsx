@@ -9,7 +9,7 @@ const App = () => {
       setCount(count + 1)
     }, [])
 
-    axios.get('http://localhost:3000/users')
+    const users = axios.get('http://localhost:3000/users')
 
 
   return (
@@ -18,6 +18,7 @@ const App = () => {
           <h1>{count}</h1>
           <button onClick={handleClick}>Increment</button>
         </p>
+          <>{users}</>
       </div>
 
   )
